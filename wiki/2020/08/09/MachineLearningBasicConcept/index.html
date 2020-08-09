@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>机器学习基本概念 | Jin&#39;s Blog</title>
+  <meta name="author" content="Jin Qin">
+  
+  <meta name="description" content="机器学习简介机器学习是一使用正确的数据，通过设计正确的模型，得到正确的结果的一类算法。机器学习算法可以不断地通过历史数据，执行相对应的任务，来提升算法的性能。
+
+
+学习的过程有可能是离线的，换句话说，在模型的执行之前进行模型的学习，例如：
+人脸识别
+垃圾邮件检测等
+
+
+学习的过程也有可能是在线的，和">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="机器学习基本概念">
+  <meta property="og:site_name" content="Jin&#39;s Blog">
+
+  
+    <meta property="og:image" content="undefined">
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="Jin&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/wiki/css/themes/yeti.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+</html>
+<body data-spy="scroll" data-target=".toc">
+  <nav id="main-nav" class="navbar  navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Jin&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/wiki" title="Wiki">
+			  <i class="fa fa-book"></i>Wiki
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+
+  <div class="container">
+    <div class="content">
+      <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Wiki</a><span class="split"></span><span class="title">机器学习基本概念</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="机器学习简介"><a href="#机器学习简介" class="headerlink" title="机器学习简介"></a>机器学习简介</h2><p>机器学习是一使用<strong>正确</strong>的数据，通过设计<strong>正确</strong>的模型，得到<strong>正确</strong>的结果的一类算法。机器学习算法可以不断地通过历史数据，执行相对应的任务，来提升算法的性能。</p>
+<p><img src="/wiki/data/images/ML/0-0.png" alt="机器学习基本框架"></p>
+<ul>
+<li>学习的过程有可能是离线的，换句话说，在模型的执行之前进行模型的学习，例如：<ul>
+<li>人脸识别</li>
+<li>垃圾邮件检测等</li>
+</ul>
+</li>
+<li>学习的过程也有可能是在线的，和模型的执行同步进行，例如：<ul>
+<li>一种自适应的接口</li>
+</ul>
+</li>
+<li>学习的过程也有可能以上两者都有，例如：<ul>
+<li>语音识别系统</li>
+</ul>
+</li>
+</ul>
+<h2 id="机器学习的目标"><a href="#机器学习的目标" class="headerlink" title="机器学习的目标"></a>机器学习的目标</h2><p>通常情况下，我们希望能够设计出各种方法和工具来构建一种能够自我学习的机器，这种机器能够使用合适的训练数据集使自己解决很多问题。</p>
+<p>最终，机器学习将形成一种<strong>DIKW金字塔</strong>的模式：</p>
+<ul>
+<li>能够揭示本质，揭示方向，解答疑问，做出决策，决定行为方式等。</li>
+<li>从过去的数据中学习，最终极大的增强未来的能力。</li>
+</ul>
+<p>但是这需要大量的数据（Big Data）！如下图所示：</p>
+<p><img src="/wiki/data/images/ML/0-1.png" alt="机器学习与大数据"></p>
+<h2 id="机器学习的应用"><a href="#机器学习的应用" class="headerlink" title="机器学习的应用"></a>机器学习的应用</h2><ul>
+<li>Search engines（搜索引擎）</li>
+<li>Machine perception（机器感知）</li>
+<li>Computer vision, including object recognition（机器视觉，包括目标识别）</li>
+<li>Natural language processing（自然语言处理）</li>
+<li>Bioinformatics（生物信息学）</li>
+<li>Syntactic pattern recognition（语义模式识别）</li>
+<li>Medical diagnosis（医学诊断）</li>
+<li>Brain-machine interfaces（脑机接口）</li>
+<li>Cheminformatics（化学信息学）</li>
+<li>Detecting credit card fraud（检测信用卡诈骗）</li>
+<li>Stock market analysis（股票市场分析）</li>
+<li>Classifying DNA sequences（DNA序列分类）</li>
+<li>Sequence mining（序列挖掘）</li>
+<li>Robot locomotion（机器人定位）</li>
+<li>Speech and handwriting recognition（语音和手写字体识别）</li>
+<li>Game playing（玩游戏）</li>
+<li>Software engineering（软件开发）</li>
+<li>Adaptive websites（自适应网站）</li>
+<li>Computational advertising（计算广告学）</li>
+<li>Computational finance（计算机金融）</li>
+<li>Structural health monitoring（结构性健康监控）</li>
+<li>Sentiment analysis (or opinion mining)（情感分析）</li>
+<li>Affective computing（情感计算）</li>
+<li>Information retrieval（信息检索）</li>
+<li>Recommender systems（推荐系统）</li>
+</ul>
+<h2 id="经典机器学习问题"><a href="#经典机器学习问题" class="headerlink" title="经典机器学习问题"></a>经典机器学习问题</h2><p>给定样本集合（训练集），我们希望建立一个能够预测出新数据的模型。</p>
+<p>例如：</p>
+<ul>
+<li>Spam filtering（垃圾邮件检测）<ul>
+<li>邮件是垃圾邮件？或者不是？</li>
+</ul>
+</li>
+<li>Medical diagnosis（医学诊断）<ul>
+<li>这些预测结果是否暗示了恶性或良性？</li>
+</ul>
+</li>
+<li>Natural language processing（自然语言处理）<ul>
+<li>这些语句在问些什么？</li>
+</ul>
+</li>
+<li>Face recognition（人脸识别）<ul>
+<li>照片里的人是谁？</li>
+</ul>
+</li>
+<li>Chess（象棋）<ul>
+<li>现在该走哪一步？</li>
+</ul>
+</li>
+</ul>
+<h3 id="一个机器学习问题的组成成分"><a href="#一个机器学习问题的组成成分" class="headerlink" title="一个机器学习问题的组成成分"></a>一个机器学习问题的组成成分</h3><ul>
+<li>Task（任务）：需要不断被增强的行为或任务，例如：<em>分类</em>，<em>目标检测</em>等</li>
+<li>Data（数据）：用于提升Task（任务）性能的经验。</li>
+<li>Measure of performance（性能衡量指标）：如何来衡量性能的提升？例如：<ul>
+<li>提供更准确的解决方案（例如：增加预测的准确性）</li>
+<li>覆盖更多的问题</li>
+<li>降低获取答案的成本（例如：速度的提升）</li>
+<li>简化可编码知识</li>
+<li>一开始没有表现出的新技能</li>
+</ul>
+</li>
+</ul>
+<h2 id="机器学习的必要要素"><a href="#机器学习的必要要素" class="headerlink" title="机器学习的必要要素"></a>机器学习的必要要素</h2><ul>
+<li>Prior assumptions（先验假设）<ul>
+<li>我们知不知道一个问题的先验条件？</li>
+</ul>
+</li>
+<li>Data（数据）<ul>
+<li>我们有什么类型的数据？</li>
+</ul>
+</li>
+<li>Representation（表达）<ul>
+<li>我们如何表达数据？</li>
+</ul>
+</li>
+<li>Model / hypothesis space（模型/假设 空间）<ul>
+<li>我们希望形成怎样的模型假设类解释数据？</li>
+</ul>
+</li>
+<li>Feedback / learning signal（反馈/学习信号）<ul>
+<li>我们拥有什么类型的学习信号（标签之类的）?</li>
+</ul>
+</li>
+<li>Learning algorithm（学习算法）<ul>
+<li>我们如何从反馈中更新模型或一系列的假设？</li>
+</ul>
+</li>
+<li>Evaluation（评估预测）<ul>
+<li>我们做的有多好？我们是否需要优化模型？</li>
+</ul>
+</li>
+</ul>
+<h2 id="机器学习的主要类型"><a href="#机器学习的主要类型" class="headerlink" title="机器学习的主要类型"></a>机器学习的主要类型</h2><ul>
+<li>监督学习<ul>
+<li>提供标记好的训练数据</li>
+<li>给出正确的答案 - 一对【输入/输出】</li>
+</ul>
+</li>
+<li>半监督学习<ul>
+<li>提供一部分标记好的训练数据，另一部分未标记的数据</li>
+<li>给出一部分正确答案，另一部分未知</li>
+</ul>
+</li>
+<li>强化学习<ul>
+<li>提供随机的，经常性延迟的信息或奖励</li>
+<li>例如：赢了或输了游戏（但是没有针对单独的步数做出反馈）</li>
+</ul>
+</li>
+<li>非监督学习<ul>
+<li>没有直接的学习信号或标记</li>
+<li>任务通常是寻找出数据中的结构（例如：聚类、降维）</li>
+</ul>
+</li>
+</ul>
+<h3 id="部分机器学习问题"><a href="#部分机器学习问题" class="headerlink" title="部分机器学习问题"></a>部分机器学习问题</h3><p>下图针对了部分机器学习类型进行了归类分析：</p>
+<p><img src="/wiki/data/images/ML/0-2.png" alt="机器学习问题归类"></p>
+<h2 id="训练、检验、测试数据集"><a href="#训练、检验、测试数据集" class="headerlink" title="训练、检验、测试数据集"></a>训练、检验、测试数据集</h2><p>通常情况下，我们将数据集划分为下面三个子数据集：</p>
+<ul>
+<li><strong>训练数据</strong>是用来学习模型的参数的</li>
+<li><strong>检验数据</strong>是用来决定哪个模型是最优的</li>
+<li><strong>测试数据</strong>是用来得到一个最终的，对于模型性能评估的无偏估计</li>
+</ul>
+<p>具体使用流程如下：<br><img src="/wiki/data/images/ML/0-3.png" alt="机器学习问题归类"></p>
+<h2 id="经典AI与机器学习方法"><a href="#经典AI与机器学习方法" class="headerlink" title="经典AI与机器学习方法"></a>经典AI与机器学习方法</h2><blockquote>
+<p>经典AI方法 - 演绎推理（Deductive reasoning）</p>
+<ul>
+<li>思考世界的本质</li>
+<li>写下能够概括智能行为的规则</li>
+<li>总希望能够充分的覆盖真实世界的各类情况</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>机器学习 - 归纳推理（Inductive reasoning）</p>
+<ul>
+<li>搜集海量的数据</li>
+<li>提供一个学习框架（事先指明一些目标）</li>
+<li>期望能够通过数据抽象出一些有意义的通用概念</li>
+</ul>
+</blockquote>
+<h3 id="演绎推理和归纳推理"><a href="#演绎推理和归纳推理" class="headerlink" title="演绎推理和归纳推理"></a>演绎推理和归纳推理</h3><ul>
+<li>演绎推理（Deductive reasoning）：从一系列已知事实和规则中学习到额外的能够保证为真的规则</li>
+<li>归纳推理（Inductive reasoning）：从一系列样本中学习到一些通用规则，这些规则应当能够适应新的样本，但是不能够保证结果一定是正确的</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>事实上可以理解为：经典AI是人为制定规则来模拟世界规则，而机器学习则是通过从海量的数据中学习世界规则</p>
+<h2 id="机器学习系统"><a href="#机器学习系统" class="headerlink" title="机器学习系统"></a>机器学习系统</h2><p>一个基础的机器学习系统如下所示：<br><img src="/wiki/data/images/ML/0-4.png" alt="机器学习系统"></p>
+<ul>
+<li>一个<strong>任务</strong>要求有一个合适的<strong>映射</strong>：用特征描述的数据 -&gt; 一个模型 -&gt; 输出<ul>
+<li>从训练数据中获取这样的模型就是所谓的：<strong>学习问题</strong></li>
+</ul>
+</li>
+<li><strong>任务</strong>是由模型进行处理的</li>
+<li><strong>学习问题</strong>可以通过<strong>学习算法</strong>（学习算法可以产生模型）来解决</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是一些机器学习基础概念的介绍，作此笔记，便于查找。</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+	
+		
+			
+			
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki"><i class="fa fa-book"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+    </div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 Jin Qin
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>

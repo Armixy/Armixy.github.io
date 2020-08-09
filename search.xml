@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 所遇问题整理]]></title>
+      <url>http://jin-qin.github.io/2016/06/11/CUDA7-5-CUDNNv4-Caffe-Ubuntu16-04-%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<p>最近用 <code>Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04</code> 遇到太多问题，因此在此整理一下。</p>
+<p>首先，应该用 <code>Python2.7</code>, 而不是<code>Python3.5</code>!!!</p>
+<a id="more"></a>
+<blockquote>
+<p>To fix shared libraries error (通常都是 <code>symbolic link</code> 的问题):</p>
+</blockquote>
+<ul>
+<li>“while loading shared libraries: libcudart.so.7.5: cannot open shared object”<ul>
+<li><code>sudo ldconfig /usr/local/cuda/lib64</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>To fix libhdf5 error:</p>
+</blockquote>
+<ul>
+<li><code>sudo apt-get install --reinstall libhdf5-10</code></li>
+<li><code>sudo apt-get install –reinstall libhdf5-dev</code></li>
+<li><code>sudo apt-get install –reinstall libhdf5-serial-dev</code></li>
+<li>Add /usr/lib/x86_64-linux-gnu/hdf5/serial/ to INCLUDE_LIBRARIES</li>
+</ul>
+<blockquote>
+<p>To fix opencv, liblzma etc errors:</p>
+</blockquote>
+<ul>
+<li>Check LD_LIBRARY_PATH, if it contains anaconda3/lib then do:</li>
+<li>Set LD_LIBRARY_PATH=”/usr/lib/x86_65-linux-gnu/“</li>
+</ul>
+<blockquote>
+<p>To fix g++ compile bugs:</p>
+</blockquote>
+<ul>
+<li>“/usr/include/string.h: In function ‘void<em> __mempcpy_inline(void</em>, const void*, size_t)’”: <ul>
+<li>如果是用 Makefile 编译的，就打开 Makfile 文件，把 <code>NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code> 这一行替换为 <code>NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code>.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>To fix python2.7 error:</p>
+</blockquote>
+<ul>
+<li>“python/caffe/_caffe.cpp:11:31: fatal error: numpy/arrayobject.h: No such file or directory”<ul>
+<li>Solution:<br><code>vim Makefile.config</code><br>Find: PYTHON_INCLUDE<br>Add: change “/usr/lib/python2.7/dist-packages/numpy/core/include” to “/usr/local/python2.7/dist-packages/numpy/core/include”</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>If matplotlib.pyplt() does not work:</p>
+</blockquote>
+<ul>
+<li><code>sudo apt-get install python-qt4</code><br>Change backend=PyQt4, and uncomment the backend=backend.pyqt4</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> Machine Learning </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Caffe </tag>
+            
+            <tag> Ubuntu 16.04 </tag>
+            
+            <tag> CUDA7.5 </tag>
+            
+            <tag> CUDNNv4 </tag>
+            
+            <tag> Chinese </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
