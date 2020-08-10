@@ -3,16 +3,16 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 所遇问题整理 | Jin&#39;s Blog</title>
+  <title>CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 Issues Collection | Jin&#39;s Blog</title>
   <meta name="author" content="Jin">
   
-  <meta name="description" content="最近用 Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04 遇到太多问题，因此在此整理一下。
-首先，应该用 Python2.7, 而不是Python3.5!!!">
+  <meta name="description" content="There are so many issues when I tried Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04, put them here in case of need.
+First, should use Python2.7 rather than Python3.5!!!">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 所遇问题整理">
+  <meta property="og:title" content="CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 Issues Collection">
   <meta property="og:site_name" content="Jin&#39;s Blog">
 
   
@@ -98,7 +98,7 @@
 
 	
 		<div class="page-header ">		
-			<h1 class="title "> CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 所遇问题整理</h1>
+			<h1 class="title "> CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 Issues Collection</h1>
 		</div>		
 	
 
@@ -118,11 +118,11 @@
 	<div class="mypage">		
 	  		
 
-	  <p>最近用 <code>Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04</code> 遇到太多问题，因此在此整理一下。</p>
-<p>首先，应该用 <code>Python2.7</code>, 而不是<code>Python3.5</code>!!!</p>
+	  <p>There are so many issues when I tried <code>Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04</code>, put them here in case of need.</p>
+<p>First, should use <code>Python2.7</code> rather than <code>Python3.5</code>!!!</p>
 <a id="more"></a>
 <blockquote>
-<p>To fix shared libraries error (通常都是 <code>symbolic link</code> 的问题):</p>
+<p>To fix shared libraries error (normally it is <code>symbolic link</code> issue):</p>
 </blockquote>
 <ul>
 <li>“while loading shared libraries: libcudart.so.7.5: cannot open shared object”<ul>
@@ -151,7 +151,7 @@
 </blockquote>
 <ul>
 <li>“/usr/include/string.h: In function ‘void<em> __mempcpy_inline(void</em>, const void*, size_t)’”: <ul>
-<li>如果是用 Makefile 编译的，就打开 Makfile 文件，把 <code>NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code> 这一行替换为 <code>NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code>.</li>
+<li>If compile with Makefile，then open Makfile，change <code>NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code> to <code>NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code>.</li>
 </ul>
 </li>
 </ul>
@@ -178,6 +178,16 @@
 	<div class="pagination">
 <ul class="pagination">
 	 
+				
+    	<li class="prev"><a href="/2020/08/10/QML-Borderless-Window/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+          <li class="next disabled"><a>Next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+        
+	
 </ul>
 </div>
 
@@ -254,7 +264,7 @@
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Caffe/">Caffe<span>1</span></a></li> <li><a href="/tags/Ubuntu-16-04/">Ubuntu 16.04<span>1</span></a></li> <li><a href="/tags/CUDA7-5/">CUDA7.5<span>1</span></a></li> <li><a href="/tags/CUDNNv4/">CUDNNv4<span>1</span></a></li> <li><a href="/tags/Chinese/">Chinese<span>1</span></a></li>
+  <li><a href="/tags/Caffe/">Caffe<span>1</span></a></li> <li><a href="/tags/Ubuntu-16-04/">Ubuntu 16.04<span>1</span></a></li> <li><a href="/tags/CUDA7-5/">CUDA7.5<span>1</span></a></li> <li><a href="/tags/CUDNNv4/">CUDNNv4<span>1</span></a></li>
     </ul>
 	</div>
 		

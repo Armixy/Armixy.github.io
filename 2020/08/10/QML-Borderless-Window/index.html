@@ -1,12 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>QML Borderless Window | Jin&#39;s Blog</title>
+  <meta name="author" content="Jin">
+  
+  <meta name="description" content="GitHub Source codesThe default frameless window style of Qt will lose the native animation and window shadow in Windows system. This is due to it does not use Desktop Window Manager (DWM) APIs to enable borderless effect.## Demo">
   
   
-    
-    <entry>
-      <title><![CDATA[QML Borderless Window]]></title>
-      <url>http://jin-qin.github.io/2020/08/10/QML-Borderless-Window/</url>
-      <content type="html"><![CDATA[<span class="label label-info">GitHub</span> <a href="https://github.com/jin-qin/qml-native-borderless-window" target="_blank" rel="noopener">Source codes</a><br><br>The default frameless window style of Qt will lose the native animation and window shadow in Windows system. This is due to it does not use <a href="https://docs.microsoft.com/en-us/windows/win32/api/_dwm/" target="_blank" rel="noopener">Desktop Window Manager (DWM)</a> APIs to enable borderless effect.<br><br>## Demo<br><img src="/data/images/native-borderlesswindow-demo.gif" alt="demo"><br><br><a id="more"></a>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="QML Borderless Window">
+  <meta property="og:site_name" content="Jin&#39;s Blog">
+
+  
+    <meta property="og:image" content="undefined">
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/yeti.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+</html>
+<body>  
+  <nav id="main-nav" class="navbar  navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Jin&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/wiki" title="Wiki">
+			  <i class="fa fa-book"></i>Wiki
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header ">		
+			<h1 class="title "> QML Borderless Window</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <span class="label label-info">GitHub</span> <a href="https://github.com/jin-qin/qml-native-borderless-window" target="_blank" rel="noopener">Source codes</a><br><br>The default frameless window style of Qt will lose the native animation and window shadow in Windows system. This is due to it does not use <a href="https://docs.microsoft.com/en-us/windows/win32/api/_dwm/" target="_blank" rel="noopener">Desktop Window Manager (DWM)</a> APIs to enable borderless effect.<br><br>## Demo<br><img src="/data/images/native-borderlesswindow-demo.gif" alt="demo"><br><br><a id="more"></a>
 <h2 id="How-to-enable-borderless-window-with-native-animation-and-shadow"><a href="#How-to-enable-borderless-window-with-native-animation-and-shadow" class="headerlink" title="How to enable borderless window with native animation and shadow"></a>How to enable borderless window with native animation and shadow</h2><blockquote>
 <p>Here is a helper function <a href="https://github.com/jin-qin/qml-native-borderless-window/blob/03530089a81986f02d0b40559d587e48ca054a71/src/util/util_misc_win.cpp#L16" target="_blank" rel="noopener">enableWindowBorderlessWin</a> that can be used to enable native shadow for a window:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">enableWindowBorderlessWin</span><span class="params">(qulonglong wId)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    HWND wnd = (HWND)wId;</span><br><span class="line">    <span class="comment">// enable borderless and keep aero effects.</span></span><br><span class="line">    SetWindowLongPtr(wnd, GWL_STYLE, <span class="keyword">static_cast</span>&lt;LONG&gt;(Style::aero_borderless));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// enable shadow</span></span><br><span class="line">    <span class="keyword">const</span> MARGINS shadow_on = &#123; <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> &#125;;</span><br><span class="line">    DwmExtendFrameIntoClientArea(wnd, &amp;shadow_on);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//redraw frame</span></span><br><span class="line">    SetWindowPos(wnd, Q_NULLPTR, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, SWP_FRAMECHANGED | SWP_NOMOVE | SWP_NOSIZE);</span><br><span class="line">    ShowWindow(wnd, SW_SHOW);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
@@ -14,109 +125,175 @@
 <blockquote>
 <p>Here is <a href="https://github.com/jin-qin/qml-native-borderless-window/blob/03530089a81986f02d0b40559d587e48ca054a71/src/util/native_event_filter.cpp#L13" target="_blank" rel="noopener">nativeEventFilter</a> to handle these issues:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">NativeEventFilter::nativeEventFilter</span><span class="params">(<span class="keyword">const</span> QByteArray &amp;eventType, <span class="keyword">void</span> *message, <span class="keyword">long</span> *result)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> Q_OS_WIN</span></span><br><span class="line">    <span class="keyword">if</span> (eventType == <span class="string">"windows_generic_MSG"</span>) &#123;</span><br><span class="line">        MSG* msg = <span class="keyword">static_cast</span>&lt;MSG *&gt;(message);</span><br><span class="line">        <span class="keyword">if</span> (msg == Q_NULLPTR)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span>(msg-&gt;message) &#123;</span><br><span class="line">        <span class="keyword">case</span> WM_COMMAND: &#123;</span><br><span class="line">          SendMessage(msg-&gt;hwnd, WM_SYSCOMMAND, msg-&gt;wParam, msg-&gt;lParam);</span><br><span class="line">          *result = DefWindowProc(msg-&gt;hwnd, msg-&gt;message, msg-&gt;wParam, msg-&gt;lParam);</span><br><span class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> WM_NCCALCSIZE:&#123;</span><br><span class="line">            NCCALCSIZE_PARAMS&amp; params = *<span class="keyword">reinterpret_cast</span>&lt;NCCALCSIZE_PARAMS*&gt;(msg-&gt;lParam);</span><br><span class="line">            <span class="keyword">if</span> (params.rgrc[<span class="number">0</span>].top != <span class="number">0</span>)</span><br><span class="line">                params.rgrc[<span class="number">0</span>].top -= <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//this kills the window frame and title bar we added with WS_THICKFRAME and WS_CAPTION</span></span><br><span class="line">            *result = WVR_REDRAW;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> WM_NCHITTEST: &#123;</span><br><span class="line">            <span class="keyword">const</span> LONG borderWidth = <span class="number">8</span>; <span class="comment">//in pixels</span></span><br><span class="line">            RECT winrect;</span><br><span class="line">            GetWindowRect(msg-&gt;hwnd, &amp;winrect);</span><br><span class="line">            <span class="keyword">long</span> x = GET_X_LPARAM(msg-&gt;lParam);</span><br><span class="line">            <span class="keyword">long</span> y = GET_Y_LPARAM(msg-&gt;lParam);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// caption, a.k.a. title bar</span></span><br><span class="line">            <span class="keyword">auto</span> wndScaleFactor = qgetenv(<span class="string">"QT_SCALE_FACTOR"</span>).toDouble();</span><br><span class="line">            <span class="keyword">int</span> titleBarHeight = m_wndsParams[(WId)msg-&gt;hwnd][<span class="string">"TitleHeight"</span>].toInt();</span><br><span class="line">            titleBarHeight = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(titleBarHeight * wndScaleFactor);</span><br><span class="line">            <span class="keyword">int</span> titleBarBtnsWidth = m_wndsParams[(WId)msg-&gt;hwnd][<span class="string">"TitleBarButtonsArea"</span>].toSize().width();</span><br><span class="line">            titleBarBtnsWidth = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(titleBarBtnsWidth * wndScaleFactor);</span><br><span class="line">            <span class="keyword">if</span> (x &gt;= winrect.left &amp;&amp; x &lt; winrect.right - titleBarBtnsWidth &amp;&amp;</span><br><span class="line">                    y &gt; winrect.top + borderWidth &amp;&amp; y &lt; winrect.top + titleBarHeight) &#123;</span><br><span class="line">                *result = HTCAPTION;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//bottom left corner</span></span><br><span class="line">            <span class="keyword">if</span> (x &gt;= winrect.left &amp;&amp; x &lt; winrect.left + borderWidth &amp;&amp;</span><br><span class="line">                y &lt; winrect.bottom &amp;&amp; y &gt;= winrect.bottom - borderWidth) &#123;</span><br><span class="line">                *result = HTBOTTOMLEFT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//bottom right corner</span></span><br><span class="line">            <span class="keyword">if</span> (x &lt; winrect.right &amp;&amp; x &gt;= winrect.right - borderWidth &amp;&amp;</span><br><span class="line">                y &lt; winrect.bottom &amp;&amp; y &gt;= winrect.bottom - borderWidth) &#123;</span><br><span class="line">                *result = HTBOTTOMRIGHT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//top left corner</span></span><br><span class="line">            <span class="keyword">if</span> (x &gt;= winrect.left &amp;&amp; x &lt; winrect.left + borderWidth &amp;&amp;</span><br><span class="line">                y &gt;= winrect.top &amp;&amp; y &lt; winrect.top + borderWidth) &#123;</span><br><span class="line">                *result = HTTOPLEFT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//top right corner</span></span><br><span class="line">            <span class="keyword">if</span> (x &lt; winrect.right &amp;&amp; x &gt;= winrect.right - borderWidth &amp;&amp;</span><br><span class="line">                y &gt;= winrect.top &amp;&amp; y &lt; winrect.top + borderWidth) &#123;</span><br><span class="line">                *result = HTTOPRIGHT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//left border</span></span><br><span class="line">            <span class="keyword">if</span> (x &gt;= winrect.left &amp;&amp; x &lt; winrect.left + borderWidth) &#123;</span><br><span class="line">                *result = HTLEFT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//right border</span></span><br><span class="line">            <span class="keyword">if</span> (x &lt; winrect.right &amp;&amp; x &gt;= winrect.right - borderWidth) &#123;</span><br><span class="line">                *result = HTRIGHT;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//bottom border</span></span><br><span class="line">            <span class="keyword">if</span> (y &lt; winrect.bottom &amp;&amp; y &gt;= winrect.bottom - borderWidth) &#123;</span><br><span class="line">                *result = HTBOTTOM;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//top border</span></span><br><span class="line">            <span class="keyword">if</span> (y &gt;= winrect.top &amp;&amp; y &lt; winrect.top + borderWidth) &#123;</span><br><span class="line">                *result = HTTOP;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> Qt </category>
-            
-        </categories>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
         
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/06/11/CUDA7-5-CUDNNv4-Caffe-Ubuntu16-04-所遇问题整理/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> QML </tag>
-            
-            <tag> C++ </tag>
-            
-            <tag> Windows </tag>
-            
-            <tag> GUI </tag>
-            
-        </tags>
-        
-    </entry>
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
     
-    <entry>
-      <title><![CDATA[CUDA7.5+CUDNNv4+Caffe+Ubuntu16.04 Issues Collection]]></title>
-      <url>http://jin-qin.github.io/2016/06/11/CUDA7-5-CUDNNv4-Caffe-Ubuntu16-04-%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</url>
-      <content type="html"><![CDATA[<p>There are so many issues when I tried <code>Caffe+CUDA7.5+CUDNNv4+Ubuntu16.04</code>, put them here in case of need.</p>
-<p>First, should use <code>Python2.7</code> rather than <code>Python3.5</code>!!!</p>
-<a id="more"></a>
-<blockquote>
-<p>To fix shared libraries error (normally it is <code>symbolic link</code> issue):</p>
-</blockquote>
-<ul>
-<li>“while loading shared libraries: libcudart.so.7.5: cannot open shared object”<ul>
-<li><code>sudo ldconfig /usr/local/cuda/lib64</code></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>To fix libhdf5 error:</p>
-</blockquote>
-<ul>
-<li><code>sudo apt-get install --reinstall libhdf5-10</code></li>
-<li><code>sudo apt-get install –reinstall libhdf5-dev</code></li>
-<li><code>sudo apt-get install –reinstall libhdf5-serial-dev</code></li>
-<li>Add /usr/lib/x86_64-linux-gnu/hdf5/serial/ to INCLUDE_LIBRARIES</li>
-</ul>
-<blockquote>
-<p>To fix opencv, liblzma etc errors:</p>
-</blockquote>
-<ul>
-<li>Check LD_LIBRARY_PATH, if it contains anaconda3/lib then do:</li>
-<li>Set LD_LIBRARY_PATH=”/usr/lib/x86_65-linux-gnu/“</li>
-</ul>
-<blockquote>
-<p>To fix g++ compile bugs:</p>
-</blockquote>
-<ul>
-<li>“/usr/include/string.h: In function ‘void<em> __mempcpy_inline(void</em>, const void*, size_t)’”: <ul>
-<li>If compile with Makefile，then open Makfile，change <code>NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code> to <code>NVCCFLAGS += -D_FORCE_INLINES -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS)</code>.</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>To fix python2.7 error:</p>
-</blockquote>
-<ul>
-<li>“python/caffe/_caffe.cpp:11:31: fatal error: numpy/arrayobject.h: No such file or directory”<ul>
-<li>Solution:<br><code>vim Makefile.config</code><br>Find: PYTHON_INCLUDE<br>Add: change “/usr/lib/python2.7/dist-packages/numpy/core/include” to “/usr/local/python2.7/dist-packages/numpy/core/include”</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>If matplotlib.pyplt() does not work:</p>
-</blockquote>
-<ul>
-<li><code>sudo apt-get install python-qt4</code><br>Change backend=PyQt4, and uncomment the backend=backend.pyqt4</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Machine Learning </category>
-            
-        </categories>
         
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
         
-        <tags>
-            
-            <tag> Caffe </tag>
-            
-            <tag> Ubuntu 16.04 </tag>
-            
-            <tag> CUDA7.5 </tag>
-            
-            <tag> CUDNNv4 </tag>
-            
-        </tags>
-        
-    </entry>
+
     
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
   
+  	 <div id="disqus_thread">
+     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  	 </div>
   
-</search>
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-08-10 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Qt/">Qt<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Qt/">Qt<span>1</span></a></li> <li><a href="/tags/QML/">QML<span>1</span></a></li> <li><a href="/tags/C/">C++<span>1</span></a></li> <li><a href="/tags/Windows/">Windows<span>1</span></a></li> <li><a href="/tags/GUI/">GUI<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'kylechin';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+	  </div>
+  </div>
+  <div class="container-narrow">
+
+  <footer> <p>
+  &copy; 2020 Jin
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+</html>
